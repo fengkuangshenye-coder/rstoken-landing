@@ -1,0 +1,27 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal global to avoid conflict with GlobalStyles component */
+:root{ --rs-border: rgba(255,255,255,0.12); }
+body{ min-height: 100dvh; }
+
+/* === rs-safe padding start === */
+:root{
+  --rs-header-h: 72px;      /* 顶部 Header 实际高度，可按需改 64/72/80 */
+  --rs-tabs-h:   56px;      /* 底部 Tab 高度 */
+}
+.rs-safe{
+  padding-top: var(--rs-header-h) !important;
+  padding-bottom: calc(var(--rs-tabs-h) + 12px) !important;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+/* 兼容某些页面把内容直接放 main */
+main{ min-height: 100vh; box-sizing: border-box; }
+@supports (padding: max(0px)){
+  .rs-safe{
+    padding-bottom: max(calc(var(--rs-tabs-h) + 12px), env(safe-area-inset-bottom));
+  }
+}
+/* === rs-safe padding end === */
