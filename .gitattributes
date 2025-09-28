@@ -30,3 +30,5 @@
 *.woff binary
 *.woff2 binary
 *.ttf binary
+
+.gitattributes text eol=lf
