@@ -1,0 +1,32 @@
+﻿* text=auto
+
+# 代码文件：用 LF，跨平台更稳定
+*.js   text eol=lf
+*.ts   text eol=lf
+*.jsx  text eol=lf
+*.tsx  text eol=lf
+*.css  text eol=lf
+*.scss text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Shell/Batch
+*.sh   text eol=lf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# PowerShell（Windows 下常用 CRLF）
+*.ps1  text eol=crlf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
